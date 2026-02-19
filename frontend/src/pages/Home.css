@@ -1,0 +1,83 @@
+body {
+  background: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.feed {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Post Card */
+.post {
+  border-bottom: 1px solid #262626;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+/* Header */
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+}
+
+.profile-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: 600;
+  flex: 1;
+}
+
+.dots {
+  cursor: pointer;
+}
+
+/* Content */
+.post-content {
+  padding: 0 15px;
+}
+
+.post-content h2 {
+  margin-bottom: 10px;
+}
+
+.post-content p {
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Actions */
+.post-actions {
+  padding: 10px 15px;
+  font-size: 20px;
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.feed {
+  max-width: 500px;
+  margin: auto;
+  padding-bottom: 70px; /* space for fixed navbar */
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+  background: #000;
+  border-top: 1px solid #262626;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}

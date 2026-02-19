@@ -1,34 +1,123 @@
+import "./Home.css";
 import Stories from "../components/Stories";
-import Post from "../components/Post";
-import Navbar from "../components/Navbar";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Home() {
-  return (
-    <div className="container">
+  const navigate = useNavigate();
+  const location = useLocation();
 
-      <div className="profile">
+  return (
+    <div className="feed" style={{ paddingBottom: "70px" }}>
+
+      {/* Top Profile Section */}
+      <div className="profile-top">
         <h1>Anurag Tiwari</h1>
         <p>AI Developer | RAG | Node | React | ML</p>
       </div>
 
+      {/* STORIES SECTION */}
       <Stories />
 
-      <Post 
-        title="About Me"
-        content="AI Engineer building scalable RAG and multi-agent systems."
-      />
+      {/* ABOUT POST */}
+      <div className="post">
+        <div className="post-header">
+          <div className="profile-circle"></div>
+          <span className="username">anurag_tiwari</span>
+          <span className="dots">•••</span>
+        </div>
 
-      <Post 
-        title="Experience"
-        content="Built AI recruitment automation system, video personality analyzer and YOLO detection pipelines."
-      />
+        <div className="post-content">
+          <h2>About Me</h2>
+          <p>AI Engineer building scalable RAG and multi-agent systems.</p>
+        </div>
 
-      <Post 
-        title="Skills"
-        content="React, Node, Python, FastAPI, MongoDB, LangChain, Docker"
-      />
+        <div className="post-actions">
+          ❤️ 💬 ✈️
+        </div>
+      </div>
 
-      <Navbar />
+      {/* EXPERIENCE POST */}
+      <div className="post">
+        <div className="post-header">
+          <div className="profile-circle"></div>
+          <span className="username">anurag_tiwari</span>
+          <span className="dots">•••</span>
+        </div>
+
+        <div className="post-content">
+          <h2>Experience</h2>
+          <p>
+            Built AI recruitment automation system, video personality analyzer
+            and YOLO detection pipelines.
+          </p>
+        </div>
+
+        <div className="post-actions">
+          ❤️ 💬 ✈️
+        </div>
+      </div>
+
+      {/* SKILLS POST */}
+      <div className="post">
+        <div className="post-header">
+          <div className="profile-circle"></div>
+          <span className="username">anurag_tiwari</span>
+          <span className="dots">•••</span>
+        </div>
+
+        <div className="post-content">
+          <h2>Skills</h2>
+          <p>
+            React, Node, Python, FastAPI, MongoDB, LangChain, Docker
+          </p>
+        </div>
+
+        <div className="post-actions">
+          ❤️ 💬 ✈️
+        </div>
+      </div>
+
+      {/* Bottom Navigation */}
+      <div
+        style={{
+          position: "fixed",
+          bottom: 0,
+          left: 0,
+          width: "100%",
+          backgroundColor: "#111",
+          display: "flex",
+          justifyContent: "space-around",
+          padding: "15px 0",
+          borderTop: "1px solid #222"
+        }}
+      >
+        <button
+          onClick={() => navigate("/")}
+          style={{
+            background: "none",
+            border: "none",
+            color: location.pathname === "/" ? "white" : "#aaa",
+            fontSize: "16px",
+            cursor: "pointer"
+          }}
+        >
+          🏠 Home
+        </button>
+
+        <button
+          onClick={() => navigate("/contact")}
+          style={{
+            background: "none",
+            border: "none",
+            color: location.pathname === "/contact" ? "white" : "#aaa",
+            fontSize: "16px",
+            cursor: "pointer"
+          }}
+        >
+          💬 Contact
+        </button>
+      </div>
+
     </div>
   );
 }

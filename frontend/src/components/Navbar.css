@@ -1,0 +1,50 @@
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  border-top: 1px solid #262626;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #aaa;
+  transition: 0.2s ease;
+}
+
+.navbar a.active {
+  color: #fff;
+}
+
+
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  border-top: 1px solid #222;
+}
+
+.bottom-navbar button {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bottom-navbar button.active {
+  color: white;
+  font-weight: bold;
+}
+

@@ -13,17 +13,20 @@ function Stories() {
   }, []);
 
   return (
-    <div className="stories">
-      {projects.map(project => (
-        <div
-          key={project.id}
-          className="story-circle"
-          onClick={() => navigate(`/project/${project.id}`)}
-        >
-          <p>{project.title}</p>
-        </div>
-      ))}
+<div className="stories">
+  {projects.map((project) => (
+    <div
+      key={project.id}
+      className="story-circle"
+      onClick={() => navigate(`/project/${project.id}`)}
+    >
+      <div className="story-inner">
+        {project.title}
+      </div>
     </div>
+  ))}
+</div>
+
   );
 }
 
