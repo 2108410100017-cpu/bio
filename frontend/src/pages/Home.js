@@ -114,7 +114,7 @@ function Home() {
             cursor: "pointer"
           }}
         >
-          💬 Contact
+          💬 Chat
         </button>
       </div>
 
