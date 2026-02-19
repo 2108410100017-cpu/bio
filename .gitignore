@@ -2,7 +2,7 @@
 # Node Modules
 # ========================
 node_modules/
-client/node_modules/
+frontend/node_modules/
 server/node_modules/
 
 # ========================
@@ -22,14 +22,14 @@ yarn-error.log*
 .env.development
 .env.production
 server/.env
-client/.env
+frontend/.env
 
 # ========================
 # Build Folders
 # ========================
 build/
 dist/
-client/build/
+frontend/build/
 
 # ========================
 # OS Files
