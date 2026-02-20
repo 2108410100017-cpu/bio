@@ -1,83 +1,117 @@
 body {
-  background: #000;
-  color: white;
-  font-family: Arial, sans-serif;
   margin: 0;
+  background: #fafafa;
+  font-family: Arial, sans-serif;
 }
 
-.feed {
-  max-width: 500px;
+.insta-feed {
+  max-width: 400px;
   margin: auto;
+  background: white;
+  padding-bottom: 70px;
+}
+
+/* Top Header */
+.insta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
 }
 
 /* Post Card */
-.post {
-  border-bottom: 1px solid #262626;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+.insta-post {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
 }
 
-/* Header */
+/* Post Header */
 .post-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px 10px;
+  padding: 10px 15px;
+}
+
+.profile-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .profile-circle {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
-  margin-right: 10px;
+  background: linear-gradient(45deg, orange, pink, purple);
 }
 
 .username {
-  font-weight: 600;
-  flex: 1;
+  font-weight: bold;
 }
 
-.dots {
-  cursor: pointer;
+/* Image Section */
+.post-image {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.gradient-bg {
+  background: linear-gradient(45deg, orange, pink);
+}
+
+.gradient-bg2 {
+  background: linear-gradient(45deg, purple, blue);
+}
+
+.gradient-bg3 {
+  background: linear-gradient(45deg, green, teal);
 }
 
 /* Content */
 .post-content {
-  padding: 0 15px;
-}
-
-.post-content h2 {
-  margin-bottom: 10px;
-}
-
-.post-content p {
-  line-height: 1.5;
-  color: #ddd;
+  padding: 10px 15px;
+  font-size: 14px;
 }
 
 /* Actions */
 .post-actions {
-  padding: 10px 15px;
+  padding: 5px 15px 15px;
   font-size: 20px;
-  display: flex;
-  gap: 15px;
-  cursor: pointer;
 }
 
-.feed {
-  max-width: 500px;
-  margin: auto;
-  padding-bottom: 70px; /* space for fixed navbar */
-}
-
-.navbar {
+/* Bottom Navbar */
+.bottom-nav {
   position: fixed;
   bottom: 0;
-  width: 100%;
-  max-width: 500px;
-  background: #000;
-  border-top: 1px solid #262626;
+  width: 400px;
+  background: white;
   display: flex;
   justify-content: space-around;
+  padding: 12px 0;
+  border-top: 1px solid #ddd;
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: gray;
+}
+
+.bottom-nav button.active {
+  color: black;
+}
+
+.stories-wrapper {
+  border-bottom: 1px solid #ddd;
   padding: 10px 0;
 }

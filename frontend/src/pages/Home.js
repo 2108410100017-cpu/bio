@@ -7,114 +7,103 @@ function Home() {
   const location = useLocation();
 
   return (
-    <div className="feed" style={{ paddingBottom: "70px" }}>
+    <div className="insta-feed">
 
-      {/* Top Profile Section */}
-      <div className="profile-top">
-        <h1>Anurag Tiwari</h1>
-        <p>AI Developer | RAG | Node | React | ML</p>
+      {/* Instagram Top Header */}
+      <div className="insta-header">
+        <h2>Instagram</h2>
+        <div>🤍 ✉️</div>
       </div>
 
       {/* STORIES SECTION */}
-      <Stories />
+      <div className="stories-wrapper">
+        <Stories />
+      </div>
 
       {/* ABOUT POST */}
-      <div className="post">
+      <div className="insta-post">
         <div className="post-header">
-          <div className="profile-circle"></div>
-          <span className="username">anurag_tiwari</span>
+          <div className="profile-left">
+            <div className="profile-circle"></div>
+            <span className="username">anurag_tiwari</span>
+          </div>
           <span className="dots">•••</span>
         </div>
 
-        <div className="post-content">
+        <div className="post-image gradient-bg">
           <h2>About Me</h2>
-          <p>AI Engineer building scalable RAG and multi-agent systems.</p>
         </div>
 
-        <div className="post-actions">
-          ❤️ 💬 ✈️
+        <div className="post-content">
+          <p>
+            AI Engineer building scalable RAG and multi-agent systems.
+          </p>
         </div>
+
+        <div className="post-actions">🤍 💬 ✈️</div>
       </div>
 
       {/* EXPERIENCE POST */}
-      <div className="post">
+      <div className="insta-post">
         <div className="post-header">
-          <div className="profile-circle"></div>
-          <span className="username">anurag_tiwari</span>
+          <div className="profile-left">
+            <div className="profile-circle"></div>
+            <span className="username">anurag_tiwari</span>
+          </div>
           <span className="dots">•••</span>
         </div>
 
-        <div className="post-content">
+        <div className="post-image gradient-bg2">
           <h2>Experience</h2>
+        </div>
+
+        <div className="post-content">
           <p>
             Built AI recruitment automation system, video personality analyzer
             and YOLO detection pipelines.
           </p>
         </div>
 
-        <div className="post-actions">
-          ❤️ 💬 ✈️
-        </div>
+        <div className="post-actions">🤍 💬 ✈️</div>
       </div>
 
       {/* SKILLS POST */}
-      <div className="post">
+      <div className="insta-post">
         <div className="post-header">
-          <div className="profile-circle"></div>
-          <span className="username">anurag_tiwari</span>
+          <div className="profile-left">
+            <div className="profile-circle"></div>
+            <span className="username">anurag_tiwari</span>
+          </div>
           <span className="dots">•••</span>
         </div>
 
-        <div className="post-content">
+        <div className="post-image gradient-bg3">
           <h2>Skills</h2>
+        </div>
+
+        <div className="post-content">
           <p>
-            React, Node, Python, FastAPI, MongoDB, LangChain, Docker
+            React • Node • Python • FastAPI • MongoDB • LangChain • Docker
           </p>
         </div>
 
-        <div className="post-actions">
-          ❤️ 💬 ✈️
-        </div>
+        <div className="post-actions">🤍 💬 ✈️</div>
       </div>
 
       {/* Bottom Navigation */}
-      <div
-        style={{
-          position: "fixed",
-          bottom: 0,
-          left: 0,
-          width: "100%",
-          backgroundColor: "#111",
-          display: "flex",
-          justifyContent: "space-around",
-          padding: "15px 0",
-          borderTop: "1px solid #222"
-        }}
-      >
+      <div className="bottom-nav">
         <button
           onClick={() => navigate("/")}
-          style={{
-            background: "none",
-            border: "none",
-            color: location.pathname === "/" ? "white" : "#aaa",
-            fontSize: "16px",
-            cursor: "pointer"
-          }}
+          className={location.pathname === "/" ? "active" : ""}
         >
-          🏠 Home
+          🏠
         </button>
 
         <button
           onClick={() => navigate("/contact")}
-          style={{
-            background: "none",
-            border: "none",
-            color: location.pathname === "/contact" ? "white" : "#aaa",
-            fontSize: "16px",
-            cursor: "pointer"
-          }}
+          className={location.pathname === "/contact" ? "active" : ""}
         >
-          💬 Chat
+          💬
         </button>
       </div>
 

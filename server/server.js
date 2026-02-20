@@ -23,6 +23,12 @@ const projects = [
     title: "YOLO CCTV Detection",
     description: "Real-time people detection system using YOLOv8.",
     tech: "Python, OpenCV"
+  },
+  {
+    id: 4,
+    title: "Recommendation system",
+    description: "Real-time people detection system using YOLOv8.",
+    tech: "Python, OpenCV"
   }
 ];
 
