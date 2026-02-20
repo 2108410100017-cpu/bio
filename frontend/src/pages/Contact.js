@@ -23,12 +23,39 @@ function Contact() {
         </div>
       </div>
 
+      {/* Action Buttons */}
+      <div className="profile-actions">
+        <button className="message-btn">Message</button>
+      </div>
+
       {/* Contact Card */}
       <div className="contact-card">
-        <h3>Contact Me</h3>
-        <p>Email: anurag@example.com</p>
-        <p>GitHub: github.com/anurag</p>
-        <p>LinkedIn: linkedin.com/in/anurag</p>
+        <h3>Contact Info</h3>
+
+        <p>
+          📧{" "}
+          <a href="mailto:anurag@example.com">
+            anurag@example.com
+          </a>
+        </p>
+
+        <p>
+          💻{" "}
+          <a href="https://github.com/anurag" target="_blank" rel="noreferrer">
+            github.com/anurag
+          </a>
+        </p>
+
+        <p>
+          🔗{" "}
+          <a
+            href="https://linkedin.com/in/anurag"
+            target="_blank"
+            rel="noreferrer"
+          >
+            linkedin.com/in/anurag
+          </a>
+        </p>
       </div>
 
       {/* Bottom Navigation */}
