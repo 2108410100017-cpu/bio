@@ -4,10 +4,11 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Main Feed Container */
 .insta-feed {
   max-width: 400px;
   margin: auto;
-  background: white;
+  background: #ffffff;
   padding-bottom: 70px;
 }
 
@@ -19,12 +20,20 @@ body {
   padding: 15px;
   font-weight: bold;
   border-bottom: 1px solid #ddd;
+  color: #000;
+}
+
+/* Stories Section */
+.stories-wrapper {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
 }
 
 /* Post Card */
 .insta-post {
   border-bottom: 1px solid #ddd;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  background: #fff;
 }
 
 /* Post Header */
@@ -50,6 +59,11 @@ body {
 
 .username {
   font-weight: bold;
+  color: #000;
+}
+
+.dots {
+  color: #555;
 }
 
 /* Image Section */
@@ -58,9 +72,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   font-size: 22px;
   font-weight: bold;
+  color: white; /* Only white inside gradient */
 }
 
 .gradient-bg {
@@ -75,16 +89,18 @@ body {
   background: linear-gradient(45deg, green, teal);
 }
 
-/* Content */
+/* Post Content */
 .post-content {
   padding: 10px 15px;
   font-size: 14px;
+  color: #000;
 }
 
-/* Actions */
+/* Post Actions */
 .post-actions {
   padding: 5px 15px 15px;
   font-size: 20px;
+  color: #333;
 }
 
 /* Bottom Navbar */
@@ -92,7 +108,7 @@ body {
   position: fixed;
   bottom: 0;
   width: 400px;
-  background: white;
+  background: #ffffff;
   display: flex;
   justify-content: space-around;
   padding: 12px 0;
@@ -104,14 +120,9 @@ body {
   border: none;
   font-size: 22px;
   cursor: pointer;
-  color: gray;
+  color: #555;
 }
 
 .bottom-nav button.active {
-  color: black;
-}
-
-.stories-wrapper {
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  color: #000;
 }

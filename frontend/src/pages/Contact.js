@@ -1,70 +1,50 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Contact() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
-    <div style={{ 
-      backgroundColor: "#000", 
-      color: "white", 
-      minHeight: "100vh", 
-      paddingBottom: "70px",
-      padding: "20px"
-    }}>
-      
-      <h1>Contact Me</h1>
+    <div className="insta-feed">
 
-      <p>Email: anurag@example.com</p>
-      <p>GitHub: github.com/anurag</p>
-      <p>LinkedIn: linkedin.com/in/anurag</p>
-
-      <h2>Detailed Projects</h2>
-
-      <div>
-        <h3>RAG System Architecture</h3>
-        <p>Vector DB + Embedding + LLM + Retrieval pipeline.</p>
+      {/* Instagram Header */}
+      <div className="insta-header">
+        <h2>Instagram</h2>
+        <div>🤍 ✉️</div>
       </div>
 
-      <div>
-        <h3>AI Recruitment System</h3>
-        <p>Semantic search, ranking, and automated summaries.</p>
+      {/* Profile Section */}
+      <div className="profile-header">
+        <div className="profile-circle"></div>
+        <div>
+          <h3 className="username">anurag_tiwari</h3>
+          <p className="bio-text">AI Developer | RAG | ML Systems</p>
+        </div>
+      </div>
+
+      {/* Contact Card */}
+      <div className="contact-card">
+        <h3>Contact Me</h3>
+        <p>Email: anurag@example.com</p>
+        <p>GitHub: github.com/anurag</p>
+        <p>LinkedIn: linkedin.com/in/anurag</p>
       </div>
 
       {/* Bottom Navigation */}
-      <div style={{
-        position: "fixed",
-        bottom: "0",
-        left: "0",
-        width: "100%",
-        backgroundColor: "#111",
-        display: "flex",
-        justifyContent: "space-around",
-        padding: "15px 0",
-        borderTop: "1px solid #222"
-      }}>
-        <button 
-          onClick={() => navigate("/")} 
-          style={{
-            background: "none",
-            border: "none",
-            color: "white",
-            fontSize: "16px"
-          }}
+      <div className="bottom-nav">
+        <button
+          onClick={() => navigate("/")}
+          className={location.pathname === "/" ? "active" : ""}
         >
-          🏠 Home
+          🏠
         </button>
 
-        <button 
-          onClick={() => navigate("/contact")} 
-          style={{
-            background: "none",
-            border: "none",
-            color: "white",
-            fontSize: "16px"
-          }}
+        <button
+          onClick={() => navigate("/contact")}
+          className={location.pathname === "/contact" ? "active" : ""}
         >
-          💬 Chat
+          💬
         </button>
       </div>
 
